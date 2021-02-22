@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+    <header></header>
+    <main>
+        <script type="text/javascript">
+            function toOneDimension($previosValue, $currentValue) {
+                return $currentValue.concat($previosValue);
+            }
+            var $sampleArrayA = [
+                ['A1', 'A2', 'A3'],
+                ['B1', 'B2', 'B3'],
+                ['C1', 'C2', 'C3']
+            ];
+            var $sampleArrayB = $sampleArrayA.reduce(toOneDimension);
+            for (var $counterVar = 0; $counterVar < $sampleArrayB.length; $counterVar++) {
+                document.write('$sanpleArrayB[' + $counterVar + ']:');
+                document.write($sampleArrayB[$counterVar]);
+                document.write('<br/>');
+            }
+
+        </script>
+        <footer></footer>
+    </main>
+</body>
+
+</html>
